@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="Pomodoro-Container">
+      <h1>Pomodoro</h1>
+
+      <!-- ============================= -->
+      <!-- CREAR ACTIVIDAD -->
+      <!-- ============================= -->
+
+      <h2>Nueva actividad</h2>
+
+      <label for="actividad">Actividad:</label>
+
+      <input
+        type="text"
+        id="actividad"
+        placeholder="Trabajo, descanso, estudio..."
+      />
+
+      <br /><br />
+
+      <label>Duración:</label>
+
+      <div class="selector-tiempo">
+        <div class="campo-tiempo">
+          <input type="number" id="horas" value="0" min="0" />
+          <span>HH</span>
+        </div>
+
+        <strong>:</strong>
+
+        <div class="campo-tiempo">
+          <input type="number" id="minutos" value="0" min="0" max="59" />
+          <span>MM</span>
+        </div>
+
+        <strong>:</strong>
+
+        <div class="campo-tiempo">
+          <input type="number" id="segundos" value="0" min="0" max="59" />
+          <span>SS</span>
+        </div>
+      </div>
+
+      <button id="agregar">Agregar actividad</button>
+
+      <!-- ============================= -->
+      <!-- ACTIVIDADES -->
+      <!-- ============================= -->
+
+      <h2>Actividades</h2>
+
+      <ul id="listaActividades"></ul>
+
+      <!-- ============================= -->
+      <!-- TEMPORIZADOR -->
+      <!-- ============================= -->
+
+      <hr />
+
+      <h2 id="actividadActual">Sin actividad</h2>
+
+      <h1 id="temporizador">00:00:00</h1>
+
+      <button id="iniciar">Iniciar</button>
+
+      <button id="detener">Detener</button>
+    </main>
+
+    <!-- JavaScript al final -->
+    <script src="pomodoro.js"></script>
+  </body>
+</html>

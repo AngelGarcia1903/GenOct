@@ -1,0 +1,555 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fondo: #050505;
+  --panel: #0d0d0d;
+  --panel-secundario: #121212;
+
+  --texto: #f5f5f5;
+  --texto-secundario: #999;
+
+  --azul: #00a8ff;
+  --azul-claro: #00e5ff;
+
+  --verde: #00ff88;
+  --verde-claro: #7cffcb;
+
+  --rojo: #ff1744;
+  --rojo-claro: #ff5252;
+
+  --borde: #252525;
+}
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  color: var(--texto);
+
+  background: radial-gradient(
+    circle at top,
+    #102030 0%,
+    #070707 40%,
+    #000 100%
+  );
+
+  overflow-x: hidden;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.pomodoro-container {
+  width: 100%;
+  max-width: 650px;
+
+  padding: 32px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.97),
+    rgba(5, 5, 5, 0.98)
+  );
+
+  border: 1px solid #222;
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 20px rgba(0, 229, 255, 0.08),
+    0 0 60px rgba(0, 0, 0, 0.8);
+
+  animation: aparecer 0.7s ease;
+}
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+h1 {
+  text-align: center;
+
+  margin-bottom: 28px;
+
+  font-size: 2.1rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(90deg, var(--azul), var(--verde));
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+/* =========================================
+   SUBTÍTULOS
+========================================= */
+
+h2 {
+  margin: 24px 0 14px;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: #ddd;
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #bbb;
+
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   INPUT ACTIVIDAD
+========================================= */
+
+#actividad {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  color: white;
+
+  background: #080808;
+
+  border: 1px solid #333;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#actividad::placeholder {
+  color: #666;
+}
+
+#actividad:focus {
+  border-color: var(--azul-claro);
+
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.25);
+}
+
+/* =========================================
+   SELECTOR HH:MM:SS
+========================================= */
+
+.selector-tiempo {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-top: 5px;
+}
+
+.campo-tiempo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.campo-tiempo span {
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  color: #777;
+
+  letter-spacing: 1.5px;
+}
+
+.selector-tiempo strong {
+  margin-top: 9px;
+
+  color: #777;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* =========================================
+   INPUTS DE TIEMPO
+========================================= */
+
+#horas,
+#minutos,
+#segundos {
+  width: 75px;
+
+  padding: 10px 5px;
+
+  text-align: center;
+
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: #e8faff;
+
+  background: #050505;
+
+  border: 1px solid #333;
+  border-radius: 9px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#horas:focus,
+#minutos:focus,
+#segundos:focus {
+  border-color: var(--azul);
+
+  box-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
+}
+
+/* =========================================
+   BOTONES GENERALES
+========================================= */
+
+button {
+  padding: 12px 20px;
+
+  margin: 8px 5px;
+
+  border: none;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* =========================================
+   AGREGAR ACTIVIDAD - AZUL
+========================================= */
+
+#agregar {
+  background: linear-gradient(135deg, #0066ff, #00b8e6);
+
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.3);
+}
+
+#agregar:hover {
+  box-shadow: 0 0 14px rgba(0, 168, 255, 0.55);
+
+  filter: brightness(1.1);
+}
+
+/* =========================================
+   INICIAR - VERDE
+========================================= */
+
+#iniciar {
+  background: linear-gradient(135deg, #00a854, #00e67a);
+
+  color: #001b0e;
+
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.25);
+}
+
+#iniciar:hover {
+  box-shadow: 0 0 14px rgba(0, 255, 136, 0.5);
+
+  filter: brightness(1.08);
+}
+
+/* =========================================
+   DETENER - ROJO
+========================================= */
+
+#detener {
+  background: linear-gradient(135deg, #b00020, #f52246);
+
+  box-shadow: 0 0 10px rgba(255, 23, 68, 0.25);
+}
+
+#detener:hover {
+  box-shadow: 0 0 14px rgba(255, 23, 68, 0.5);
+
+  filter: brightness(1.08);
+}
+
+/* =========================================
+   LISTA DE ACTIVIDADES
+========================================= */
+
+#listaActividades {
+  list-style: none;
+
+  margin-top: 10px;
+
+  padding: 0;
+}
+
+#listaActividades li {
+  margin-bottom: 9px;
+
+  padding: 12px 15px;
+
+  background: linear-gradient(90deg, #0a0a0a, #111);
+
+  border: 1px solid #1c1c1c;
+  border-left: 3px solid var(--azul);
+
+  border-radius: 8px;
+
+  color: #ccc;
+
+  font-size: 0.9rem;
+
+  animation: actividadEntrada 0.3s ease;
+
+  transition:
+    transform 0.2s ease,
+    border-left-color 0.2s ease,
+    background 0.2s ease;
+}
+
+#listaActividades li:hover {
+  transform: translateX(4px);
+
+  border-left-color: var(--verde);
+
+  background: #151515;
+}
+
+/* =========================================
+   SEPARADOR
+========================================= */
+
+hr {
+  margin: 28px 0;
+
+  border: none;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 168, 255, 0.7),
+    transparent
+  );
+}
+
+/* =========================================
+   ACTIVIDAD ACTUAL
+========================================= */
+
+#actividadActual {
+  margin: 5px 0 12px;
+
+  text-align: center;
+
+  color: var(--verde);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.25);
+}
+
+/* =========================================
+   TEMPORIZADOR
+========================================= */
+
+#temporizador {
+  width: fit-content;
+  min-width: 300px;
+
+  margin: 15px auto 22px;
+  padding: 16px 24px;
+
+  text-align: center;
+
+  /*
+       Usamos la misma familia de fuente
+       que el resto de la aplicación.
+    */
+  font-family: inherit;
+
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  font-weight: 600;
+
+  /*
+       Los números ocupan un ancho uniforme.
+       Esto evita movimientos visuales molestos
+       durante la cuenta regresiva.
+    */
+  font-variant-numeric: tabular-nums;
+
+  letter-spacing: 3px;
+
+  color: #e8faff;
+
+  background: linear-gradient(145deg, #050505, #0a0a0a);
+
+  border: 1px solid #242424;
+  border-radius: 14px;
+
+  /*
+       Neón mucho más discreto.
+       No tiene animación.
+    */
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.25);
+
+  box-shadow:
+    inset 0 0 15px rgba(0, 0, 0, 0.8),
+    0 0 12px rgba(0, 168, 255, 0.08);
+}
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes actividadEntrada {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+
+    align-items: flex-start;
+  }
+
+  .pomodoro-container {
+    padding: 22px 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .selector-tiempo {
+    justify-content: center;
+
+    gap: 6px;
+  }
+
+  #horas,
+  #minutos,
+  #segundos {
+    width: 65px;
+
+    font-size: 1rem;
+  }
+
+  #temporizador {
+    min-width: 0;
+    width: 100%;
+
+    padding: 14px 10px;
+
+    font-size: clamp(2rem, 11vw, 2.8rem);
+
+    letter-spacing: 2px;
+  }
+
+  button {
+    width: 100%;
+
+    margin: 6px 0;
+  }
+}
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
