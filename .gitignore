@@ -1,0 +1,11 @@
+# Backups de SQL Server
+*.bak
+
+# Archivos comprimidos grandes
+*.zip
+*.rar
+*.7z
+
+# Temporales
+*.tmp
+*.log
