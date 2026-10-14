@@ -1,0 +1,58 @@
+@P04R01_APIREST_HostAddress = http://localhost:5283
+
+GET {{P04R01_APIREST_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{P04R01_APIREST_HostAddress}}/api/usuarios
+Accept: application/json
+
+###
+
+GET {{P04R01_APIREST_HostAddress}}/api/usuarios/1
+Accept: application/json
+
+###
+
+###
+
+# Prueba Thona - Caracteristica 1: codigo postal
+GET {{P04R01_APIREST_HostAddress}}/api/CodigoPostal/06700
+Accept: application/json
+
+###
+
+# Codigo postal sin informacion (404)
+GET {{P04R01_APIREST_HostAddress}}/api/CodigoPostal/99999
+Accept: application/json
+
+###
+
+# Prueba Thona - Caracteristica 2: procesar persona (no guarda)
+POST {{P04R01_APIREST_HostAddress}}/api/Persona/procesar
+Content-Type: application/json
+
+{
+  "nombreCompleto": "  maria de la   cruz perez ",
+  "hobby": "leer",
+  "fechaNacimiento": "1995-03-07",
+  "email": "maria@test.com"
+}
+
+###
+
+# Prueba Thona - Caracteristica 3: finalizar (valida y GUARDA en TBLUsuarios)
+POST {{P04R01_APIREST_HostAddress}}/api/Persona/finalizar
+Content-Type: application/json
+
+{
+  "persona": {
+    "nombreCompleto": "maria de la cruz perez",
+    "hobby": "leer",
+    "fechaNacimiento": "1995-03-07",
+    "email": "maria@test.com"
+  },
+  "cp": "06700",
+  "codColonia": "000947"
+}

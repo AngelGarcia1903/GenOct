@@ -1,0 +1,28 @@
+@Api = http://localhost:5220
+
+GET {{Api}}/api/productos
+Accept: application/json
+
+###
+GET {{Api}}/api/productos/categorias
+
+###
+GET {{Api}}/api/productos/populares?top=3
+
+###
+GET {{Api}}/api/pedidos/1
+
+###
+POST {{Api}}/api/pedidos
+Content-Type: application/json
+
+{
+  "cliente": { "nombre": "Ana López", "email": "ana@correo.com", "telefono": "4621234567" },
+  "productos": [ { "productoID": 1, "cantidad": 2 }, { "productoID": 11, "cantidad": 1 } ]
+}
+
+###
+GET {{Api}}/api/reportes/resumen-ventas
+
+###
+GET {{Api}}/api/auditoria

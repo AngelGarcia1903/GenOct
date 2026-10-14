@@ -1,0 +1,17 @@
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaPresentacionWinForms.exe.config
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaPresentacionWinForms.exe
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaPresentacionWinForms.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaEntidades.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaNegocios.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaDatos.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaEntidades.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaNegocios.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaDatos.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\bin\Debug\CapaDatos.dll.config
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPresentacionWinForms.csproj.AssemblyReference.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPresentacionWinForms.Properties.Resources.resources
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPresentacionWinForms.csproj.GenerateResource.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPresentacionWinForms.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPres.1BD9DD8A.Up2Date
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPresentacionWinForms.exe
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaPresentacionWinForms\obj\Debug\CapaPresentacionWinForms.pdb

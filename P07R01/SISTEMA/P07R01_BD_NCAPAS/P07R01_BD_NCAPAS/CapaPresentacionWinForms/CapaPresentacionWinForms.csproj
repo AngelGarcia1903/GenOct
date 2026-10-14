@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B48D045D-4DD9-4471-ABAF-F22EBF1A46CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaPresentacionWinForms</RootNamespace>
+    <AssemblyName>CapaPresentacionWinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCamiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCamiones.Designer.cs">
+      <DependentUpon>FrmCamiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCamionEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCamionEditar.Designer.cs">
+      <DependentUpon>FrmCamionEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChoferes.Designer.cs">
+      <DependentUpon>FrmChoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChoferEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChoferEditar.Designer.cs">
+      <DependentUpon>FrmChoferEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRutas.Designer.cs">
+      <DependentUpon>FrmRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRutaEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRutaEditar.Designer.cs">
+      <DependentUpon>FrmRutaEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Alerta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\BarraFiltros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\BarraProgreso.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\BotonMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\BotonRedondo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\CajaRedonda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\CasillaVerificacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\DialogoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\FormularioSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\FrmMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\ListaTarjetas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\ListaUltimasRutas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\MarcaMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\PanelVidrio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\PieDePagina.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\TarjetaDato.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\TarjetaItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\TituloPagina.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilidades\CargadorImagenes.cs" />
+    <Compile Include="Utilidades\Dialogos.cs" />
+    <Compile Include="Utilidades\Mensajes.cs" />
+    <Compile Include="Utilidades\Tema.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{69d9927a-6086-46c6-920d-1172e4e6153f}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
+      <Project>{341ceebb-4ace-4385-9afd-8e8cad46d0d2}</Project>
+      <Name>CapaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

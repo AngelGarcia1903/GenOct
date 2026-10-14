@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Cafe House: descubre nuestros cafés, encuentra tu favorito y disfruta de una pausa hecha a tu medida."
+    />
+    <meta name="theme-color" content="#243c32" />
+    <title>Tu pedido | Cafe House</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/cafe-house.css" />
+    <!-- jQuery + AJAX: api.js hace las peticiones a la API y cafeteria.js pinta los resultados -->
+    <script src="js/jquery-1.11.2.min.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/cafeteria.js" defer></script>
+    <script src="js/cafe-house.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Cafe House, inicio">
+          <img src="img/logo.png" width="32" height="41" alt="" />
+          <span>Cafe House<small>CAFÉ · CON CALMA</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">
+          Menú <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="navigation" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="menu.html">Nuestra carta</a>
+          <a href="today-special.html">Especiales</a>
+          <a href="index.html#historia">Nuestra esencia</a>
+          <a class="nav-contact" href="pedido.html" aria-current="page">
+            Tu pedido <span class="cart-count is-empty" data-carrito-total>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-intro container">
+        <p class="eyebrow">YA CASI ESTÁ LISTO</p>
+        <h1>Tu pedido,<br />a tu <em>medida.</em></h1>
+        <p>Revisa tus productos, déjanos tus datos y confirma. Tu pedido queda registrado al instante.</p>
+      </section>
+
+      <section class="container contact-grid section pedido-grid">
+        <div class="pedido-resumen">
+          <span class="eyebrow">TU SELECCIÓN</span>
+          <h2>Resumen del<br /><em>pedido.</em></h2>
+          <!-- Precios y existencias actuales por AJAX con GET /api/productos -->
+          <div id="carrito-lista" aria-live="polite">
+            <noscript><p>Activa JavaScript para armar tu pedido.</p></noscript>
+          </div>
+          <p class="carrito-total">Total estimado <strong id="carrito-total">$0.00</strong></p>
+        </div>
+
+        <!-- Se envía por AJAX con POST /api/pedidos (Clientes + Pedidos + DetallesPedido) -->
+        <form id="pedido-form">
+          <div class="form-row">
+            <div>
+              <label for="nombre">Tu nombre</label>
+              <input id="nombre" name="nombre" autocomplete="name" minlength="2" maxlength="100" required placeholder="¿Cómo te llamas?" />
+            </div>
+            <div>
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="100" required placeholder="tu@correo.com" />
+            </div>
+          </div>
+          <label for="telefono">Teléfono <span class="opcional">(opcional, 10 dígitos)</span></label>
+          <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="numeric" pattern="\d{10}" maxlength="10" placeholder="4621234567" />
+          <p class="privacy-note">Usamos tus datos solo para registrar y dar seguimiento a tu pedido.</p>
+          <button class="button" type="submit" id="enviar-pedido" disabled>Confirmar pedido</button>
+          <div id="pedido-estado" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section class="container section consulta-section" aria-labelledby="consulta-titulo">
+        <div class="consulta">
+          <div>
+            <span class="eyebrow">¿YA HICISTE UN PEDIDO?</span>
+            <h2 id="consulta-titulo">Consulta tu <em>pedido.</em></h2>
+            <!-- Se consulta por AJAX con GET /api/pedidos/{id} -->
+            <form id="consulta-form" class="consulta-form">
+              <label for="consulta-id">Número de pedido</label>
+              <div class="consulta-fila">
+                <input id="consulta-id" name="id" type="number" min="1" required placeholder="Ej. 3" />
+                <button class="button" type="submit">Consultar</button>
+              </div>
+            </form>
+          </div>
+          <div id="consulta-resultado" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-top">
+        <div>
+          <a class="brand" href="index.html">Cafe House</a>
+          <p>Buen café. Buena compañía.<br />Un momento para ti.</p>
+        </div>
+        <nav aria-label="Navegación del pie">
+          <a href="menu.html">Nuestra carta</a>
+          <a href="today-special.html">Especiales</a>
+          <a href="pedido.html">Tu pedido</a>
+        </nav>
+        <p class="footer-note">Tómate la vida<br /><em>una taza a la vez.</em></p>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Cafe House</span>
+        <span>Diseño original: TemplateMo · Una nueva forma de disfrutarlo</span>
+        <a href="#main">Volver arriba ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

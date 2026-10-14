@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "camionesweb",
+      "runtimeExecutable": "C:\\Program Files\\IIS Express\\iisexpress.exe",
+      "runtimeArgs": ["/path:C:\\Users\\Angel\\Desktop\\TR NETWORK\\PROYECTO\\P07R01\\SISTEMA\\P07R01_BD_NCAPAS\\P07R01_BD_NCAPAS\\CamionesWeb", "/port:59300"],
+      "port": 59300
+    },
+    {
+      "name": "cafeteria-front",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5500", "--bind", "127.0.0.1", "--directory", "C:\\Users\\Angel\\Desktop\\TR NETWORK\\PROYECTO\\P06R01_AJAX_CAFETERIA\\SISTEMA\\FRONTEND"],
+      "port": 5500
+    }
+  ]
+}

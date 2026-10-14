@@ -1,0 +1,23 @@
+/* Tailwind CSS v4: esta línea carga el reset (preflight) y todas las clases utilitarias */
+@import "tailwindcss";
+
+/* Le dice a Tailwind en qué archivos buscar las clases que usamos (ruta relativa a este .css).
+   Sin esto, la detección automática no encontraba los .jsx (la carpeta está dentro de otro repositorio git). */
+@source "./";
+
+/* Tokens propios del proyecto: se usan como clases (ej. bg-marca-600, text-marca-700) */
+@theme {
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --color-marca-50: oklch(0.97 0.02 265);
+  --color-marca-100: oklch(0.93 0.04 265);
+  --color-marca-200: oklch(0.87 0.07 265);
+  --color-marca-500: oklch(0.58 0.19 265);
+  --color-marca-600: oklch(0.51 0.21 265);
+  --color-marca-700: oklch(0.45 0.2 265);
+  --color-marca-900: oklch(0.3 0.12 265);
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}

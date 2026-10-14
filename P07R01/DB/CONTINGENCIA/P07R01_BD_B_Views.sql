@@ -1,0 +1,72 @@
+USE GenOctCCR
+GO
+/*
+Proyecto P07R01_BD_JAGJ
+Auto: Jose Angel Garcia Juarez
+Fecha: 20261008
+Descripción: Contingencia de vistas
+*/
+
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_NAME = N'VWCamiones'
+	AND TABLE_SCHEMA = 'dbo')
+	BEGIN
+		DROP VIEW dbo.VWCamiones;
+		PRINT 'SE ELIMINO LA VISTA VWCamiones';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE LA VISTA VWCamiones';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_NAME = N'VWChoferes'
+	AND TABLE_SCHEMA = 'dbo')
+	BEGIN
+		DROP VIEW dbo.VWChoferes;
+		PRINT 'SE ELIMINO LA VISTA VWChoferes';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE LA VISTA VWChoferes';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_NAME = N'VWRutas'
+	AND TABLE_SCHEMA = 'dbo')
+	BEGIN
+		DROP VIEW dbo.VWRutas;
+		PRINT 'SE ELIMINO LA VISTA VWRutas';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE LA VISTA VWRutas';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------

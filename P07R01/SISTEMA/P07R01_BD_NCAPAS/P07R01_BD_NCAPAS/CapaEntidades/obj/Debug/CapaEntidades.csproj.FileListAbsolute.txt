@@ -1,0 +1,6 @@
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaEntidades\bin\Debug\CapaEntidades.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaEntidades\bin\Debug\CapaEntidades.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaEntidades\obj\Debug\CapaEntidades.csproj.AssemblyReference.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaEntidades\obj\Debug\CapaEntidades.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaEntidades\obj\Debug\CapaEntidades.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaEntidades\obj\Debug\CapaEntidades.pdb

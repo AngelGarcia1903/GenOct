@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Cafe House: descubre nuestros cafés, encuentra tu favorito y disfruta de una pausa hecha a tu medida."
+    />
+    <meta name="theme-color" content="#243c32" />
+    <title>Nuestra carta | Cafe House</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/cafe-house.css" />
+    <!-- jQuery + AJAX: api.js hace las peticiones a la API y cafeteria.js pinta los resultados -->
+    <script src="js/jquery-1.11.2.min.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/cafeteria.js" defer></script>
+    <script src="js/cafe-house.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Cafe House, inicio">
+          <img src="img/logo.png" width="32" height="41" alt="" />
+          <span>Cafe House<small>CAFÉ · CON CALMA</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">
+          Menú <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="navigation" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="menu.html" aria-current="page">Nuestra carta</a>
+          <a href="today-special.html">Especiales</a>
+          <a href="index.html#historia">Nuestra esencia</a>
+          <a class="nav-contact" href="pedido.html">
+            Tu pedido <span class="cart-count is-empty" data-carrito-total>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-intro container">
+        <p class="eyebrow">A TU GUSTO, A TU RITMO</p>
+        <h1>Una taza para<br />cada <em>momento.</em></h1>
+        <p>Elige tus productos, indica cuántos quieres y agrégalos a tu pedido. Precios y existencias al día.</p>
+      </section>
+
+      <section class="container section menu-section" aria-label="Carta de productos">
+        <div class="filter-bar" hidden>
+          <!-- Botones creados por AJAX con GET /api/productos/categorias -->
+          <div class="filters" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+          <p id="filter-status" role="status"></p>
+        </div>
+
+        <!-- Tarjetas creadas por AJAX con GET /api/productos?categoria=... -->
+        <div class="cards" id="carta-lista" aria-live="polite">
+          <noscript><p>Activa JavaScript para ver la carta.</p></noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-top">
+        <div>
+          <a class="brand" href="index.html">Cafe House</a>
+          <p>Buen café. Buena compañía.<br />Un momento para ti.</p>
+        </div>
+        <nav aria-label="Navegación del pie">
+          <a href="menu.html">Nuestra carta</a>
+          <a href="today-special.html">Especiales</a>
+          <a href="pedido.html">Tu pedido</a>
+        </nav>
+        <p class="footer-note">Tómate la vida<br /><em>una taza a la vez.</em></p>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Cafe House</span>
+        <span>Diseño original: TemplateMo · Una nueva forma de disfrutarlo</span>
+        <a href="#main">Volver arriba ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+@CamionesAPI_HostAddress = http://localhost:5290
+
+### Camiones: todos
+GET {{CamionesAPI_HostAddress}}/api/Camiones
+Accept: application/json
+
+### Camiones: solo disponibles
+GET {{CamionesAPI_HostAddress}}/api/Camiones?disponibilidad=true
+Accept: application/json
+
+### Camiones: por id
+GET {{CamionesAPI_HostAddress}}/api/Camiones/1
+Accept: application/json
+
+### Camiones: crear (sin IdCamion; lo genera el IDENTITY)
+POST {{CamionesAPI_HostAddress}}/api/Camiones
+Content-Type: application/json
+
+{
+  "matricula": "GTO-0001",
+  "tipoCamion": "Tolva",
+  "modelo": 2022,
+  "marca": "VW",
+  "capacidad": 1200,
+  "kilometraje": 90000,
+  "disponibilidad": true,
+  "urlFoto": "http://fotos/gto-0001.jpg"
+}
+
+### Choferes: todos
+GET {{CamionesAPI_HostAddress}}/api/Choferes
+Accept: application/json
+
+### Rutas: todas
+GET {{CamionesAPI_HostAddress}}/api/Rutas
+Accept: application/json
+
+###

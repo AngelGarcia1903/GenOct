@@ -1,0 +1,9 @@
+{
+  "name": "p06r01-cafeteria-front",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend HTML + jQuery AJAX de Cafe House. No tiene dependencias: 'npm run dev' solo levanta un servidor local en http://localhost:5500.",
+  "scripts": {
+    "dev": "python -m http.server 5500 --bind 127.0.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaNegocios.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaNegocios.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaDatos.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaEntidades.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaDatos.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaDatos.dll.config
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\bin\Debug\CapaEntidades.pdb
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\obj\Debug\CapaNegocios.csproj.AssemblyReference.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\obj\Debug\CapaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\obj\Debug\CapaNego.1D246B3C.Up2Date
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\obj\Debug\CapaNegocios.dll
+C:\Users\Angel\Desktop\TR NETWORK\PROYECTO\P07R01\SISTEMA\P07R01_BD_NCAPAS\P07R01_BD_NCAPAS\CapaNegocios\obj\Debug\CapaNegocios.pdb

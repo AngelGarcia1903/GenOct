@@ -1,0 +1,383 @@
+USE GenOctCCR
+GO
+/*
+Proyecto P07R01_BD_JAGJ
+Auto: Jose Angel Garcia Juarez
+Fecha: 20261008
+Descripción: Contingencia de StoredProcedures
+*/
+
+--SP1
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Insert_Camion'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Insert_Camion;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Insert_Camion';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Insert_Camion';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP2
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Select_Camion'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Select_Camion;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Select_Camion';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Select_Camion';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP3
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Update_Camion'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Update_Camion;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Update_Camion';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Update_Camion';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP4
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Delete_Camion'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Delete_Camion;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Delete_Camion';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Delete_Camion';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP5
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Insert_Choferes'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Insert_Choferes;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Insert_Choferes';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Insert_Choferes';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP6
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Select_Chofer'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Select_Chofer;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Select_Chofer';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Select_Chofer';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP7
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Update_Choferes'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Update_Choferes;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Update_Choferes';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Update_Choferes';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP8
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Delete_Chofer'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Delete_Chofer;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Delete_Chofer';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Delete_Chofer';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP9
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Insert_Rutas'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Insert_Rutas;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Insert_Rutas';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Insert_Rutas';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP10
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Select_Rutas'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Select_Rutas;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Select_Rutas';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Select_Rutas';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP11
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Update_Rutas'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Update_Rutas;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Update_Rutas';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Update_Rutas';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP12
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Delete_Ruta'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Delete_Ruta;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Delete_Ruta';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Delete_Ruta';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP13
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Select_Rutas_Detalle'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Select_Rutas_Detalle;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Select_Rutas_Detalle';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Select_Rutas_Detalle';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP14
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Existe_Licencia'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Existe_Licencia;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Existe_Licencia';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Existe_Licencia';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP15
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Obtener_Camion_ID'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Obtener_Camion_ID;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Obtener_Camion_ID';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Obtener_Camion_ID';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP16
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Existe_Matricula'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Existe_Matricula;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Existe_Matricula';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Existe_Matricula';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
+--SP17
+BEGIN TRANSACTION;
+BEGIN TRY
+	IF EXISTS(SELECT 1 FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME = N'Listar_Camiones'
+	AND ROUTINE_SCHEMA = 'dbo')
+	BEGIN
+		DROP PROCEDURE dbo.Listar_Camiones;
+		PRINT 'SE ELIMINO CORRECTAMENTE EL SP Listar_Camiones';
+	END
+	ELSE
+	BEGIN
+		PRINT 'NO EXISTE EL SP Listar_Camiones';
+	END
+	COMMIT TRANSACTION;
+END TRY
+BEGIN CATCH
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION;
+	THROW;
+END CATCH
+GO
+------------------------------------------------------------------------------------------------
